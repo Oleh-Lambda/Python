@@ -1,0 +1,1 @@
+lowText = lambda text: print(str(text).lower())
