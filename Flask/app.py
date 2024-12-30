@@ -4,11 +4,28 @@
 # - Встановлення Flask -
 # pip install flask
 
-# - Створення першого веб-додатку -
+# 1. - Створення першого веб-додатку -
+# import flask
+# app = flask.Flask("Flask-app")
+# @app.route("/")
+# def home():
+#     return "Hello, World!"
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+# 2. - Передача параметрів в URL -
 import flask
-app = flask.Flask(__name__)
+app = flask.Flask("Flask-app")
 @app.route("/")
 def home():
-    return "Hello, World!"
+    return "Welcome to my website!"
+@app.route("/<username>")
+def user_profile(username):
+    return f"Hello, {username}!"
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
+# - методи flask -
+# Flask() - створює об'єкт додатку, в параметрах - назва додатку.
+# @app.route() - декоратор, який вказує, який URL викликає функцію.
+# app.run(debug=True) - запускає сервер, в параметрах - включення режиму налагодження(дебаг).
