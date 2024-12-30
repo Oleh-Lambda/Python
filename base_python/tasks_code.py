@@ -504,14 +504,14 @@
 #         print(True)
 
 # 45
-import string
-s = "c#dc"
-for i in string.punctuation:
-    s = "".join("".join(s.lower().split()).split(i))
-if s[::-1] == s:
-    print(True)
-else:
-    print(False)
+# import string
+# s = "c#dc"
+# for i in string.punctuation:
+#     s = "".join("".join(s.lower().split()).split(i))
+# if s[::-1] == s:
+#     print(True)
+# else:
+#     print(False)
 
 # 1
 # user_numbers = sum(list(map(int, input('Перше і друге >> ').split())))
@@ -652,3 +652,20 @@ else:
 #         info = file.read()
 #         print(info)
 
+# 19
+class Brothers():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def brother_info(self):
+        print(f"Name - {self.name}\n Age - {self.age}")
+brother = Brothers("Daniil", 20)
+brother.brother_info()
+brother = Brothers("Max", 18)
+brother.brother_info()
+brother = Brothers("Denis", 22)
+brother.brother_info()
+brother = Brothers("Nazarii", 27)
+brother.brother_info()
+brother = Brothers("Other", "21 - 22")
+brother.brother_info()
