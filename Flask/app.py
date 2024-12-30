@@ -14,16 +14,28 @@
 #     app.run(debug=True)
 
 # 2. - Передача параметрів в URL -
-import flask
-app = flask.Flask("Flask-app")
-@app.route("/")
-def home():
-    return "Welcome to my website!"
-@app.route("/<username>")
-def user_profile(username):
-    return f"Hello, {username}!"
-if __name__ == "__main__":
-    app.run(debug=True)
+# import flask
+# app = flask.Flask("Flask-app")
+# @app.route("/")
+# def home():
+#     return "Welcome to my website!"
+# @app.route("/<username>")
+# def user_profile(username):
+#     return f"Hello, {username}!"
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+# 3. - Передача відповідних параметрів в URL -
+# import flask
+# app = flask.Flask("Flask-app")
+# @app.route("/")
+# def home():
+#     return "Welcome to my website!"
+# @app.route("/<int:number>")
+# def number_test(number):
+#     return f"Is {number}"
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
 # - методи flask -
 # Flask() - створює об'єкт додатку, в параметрах - назва додатку.
